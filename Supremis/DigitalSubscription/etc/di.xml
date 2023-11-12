@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Directory\Model\AllowedCountries"
+                type="Supremis\DigitalSubscription\Model\SetAllowedCountries"/>
+    <type name="Magento\Checkout\Controller\Cart\Add">
+        <plugin name="restrict_add_to_cart" type="Supremis\DigitalSubscription\Plugin\Checkout\Controller\Cart\Add"/>
+    </type>
+    <preference for="Magento\Review\Block\Product\ReviewRenderer"
+                type="Supremis\DigitalSubscription\Block\Product\ReviewRenderer"/>
+    <preference for="Magento\Catalog\Block\Product\View\Options\Type\Select"
+                type="Supremis\DigitalSubscription\Block\Product\View\Options\Type\Select"/>
+    <preference for="Magento\Sales\Block\Order\Info\Buttons"
+                type="Supremis\DigitalSubscription\Block\Order\Info\Buttons"/>
+</config>
